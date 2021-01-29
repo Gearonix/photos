@@ -1,0 +1,134 @@
+@import './../../source/fonts/font.css';
+.main{
+    width: 100%;
+    height: 132px;
+    border-bottom: 3px solid #E1E1E1;
+    background : white;
+    display: flex;
+    justify-content: space-around;
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*z-index: 10;*/
+}
+.logo{
+    background : url("../../source/images/logo.svg") no-repeat;
+    width: 125px;
+    height: 108px;
+    margin-top: 20px;
+}
+.navbar{
+     width: 55%;
+    height: 100%;
+ }
+.navbar ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+.navbar ul li a,.file,.adaptiveHidden{
+    color : #828282;
+    font-size: 28px;
+    transition: color,0.5s;
+    position: relative;
+    overflow: hidden;
+}
+.navbar ul li a:hover,.file:hover,.adaptiveHidden{
+    color: rgba(129, 157, 172, 1);
+}
+.navbar ul li:before,.adaptiveIcon:before{
+    font-family: 'icomoon' !important;
+    color : #828282;
+    font-size: 28px;
+    margin-right: 4.5%;
+}
+.navbar ul li{
+    width: 38%;
+}
+.navbar ul li button{
+    border: none;
+    outline: none;
+    color : #828282;
+    font-size: 28px;
+    background: transparent;
+    cursor: pointer;
+    transition: color,0.5s;
+
+}
+.navbar ul li button:hover{
+    color: rgba(129, 157, 172, 1);
+}
+.logout:before,.adaptiveLogout:before{
+    content: "\ea14";
+}
+.about:before,.adaptiveAbout:before{
+    content: "\ea0c";
+}
+.download:before,.adaptiveDownload:before{
+    content: "\e95e";
+}
+.navbar ul .download{
+    display: flex;
+    width: 41%;
+}
+.fileInput{
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 1;
+}
+.chosen:before,.adaptiveChosen:before{
+    content: "\e900";
+}
+.adaptiveIcon{
+    display: none;
+}
+@media (max-width: 1406px){
+    .navbar ul li button,.navbar ul li a,.file,.navbar ul li:before{
+        font-size: 22px;
+    }
+}
+@media (max-width: 1117px) {
+    .navbar{
+        width: 65%;
+    }
+}
+
+@media (max-width: 883px) {
+   .adaptiveIcon{
+       display: block;
+   }
+    .adaptiveIcon:before{
+        font-size: 44px;
+    }
+   .navbar ul li button,.navbar ul li:before,.adaptiveHidden{
+       display: none;
+   }
+   .adaptiveAbout{
+       display: block;
+   }
+   .navbar{
+       width: 50%;
+   }
+}
+@media (max-width: 556px) {
+    .logo{
+        width: 100px;
+        background-size: 100%;
+    }
+    .navbar{
+        width: 55%;
+    }
+}
+@media (max-width: 451px) {
+    .navbar{
+        width: 65%;
+    }
+    .adaptiveIcon:before{
+        font-size: 35px;
+    }
+}

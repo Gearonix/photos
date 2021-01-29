@@ -1,0 +1,460 @@
+@import url('../../../source/fonts/font.css');
+@import url('../../../source/fonts/arrows/burger.css');
+.navbar,.noneOpacity{
+    height: 96px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar{
+    animation : navbar_open 1s;
+}
+.showBack:before{
+    font-family: 'icomoon' !important;
+    content: "\e903";
+}
+.showBack{
+    height: 38px;
+    width: 2.8%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color : white;
+    font-size: 35px;
+    font-weight: normal;
+    margin-left: 21px;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s;
+}
+.showBack:hover{
+    color : rgba(156, 156, 156, 1)
+}
+.s{
+    width: 16%;
+    height: 100%;
+    margin-right: 3%;
+}
+
+.deleteImage:before{
+    content: "\e9ac";
+}
+.s ul li *{
+    transition: color 0.3s;
+    color : white;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+
+
+}
+.s ul li *:before{
+    font-family: 'icomoon' !important;
+    font-size: 35px;
+    font-weight: normal;
+}
+.s ul li *:hover{
+    color : rgba(156, 156, 156, 1)
+}
+.s ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+.chosenShow:before{
+    content: "\e900";
+}
+.othersShow:before{
+    font-family: 'icomoon' !important;
+    content: "\e9bd";
+    font-size: 44px;
+}
+.alreadyChosen:before{
+    content: "\e900";
+    color : rgba(244, 117, 132, 1)
+}
+
+.infoShow:before{
+    content: "\ea0c";
+}
+@keyframes navbar_close{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+@keyframes navbar_open{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.noneOpacity{
+    animation : navbar_close 1s;
+}
+.sliderBlock{
+    height: 94%;
+    width: 100%;
+}
+.prevShow,.sledShow{
+    width: 75px;
+    height: 75px;
+    background : url("../../../source/images/arrow.svg") no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    background-size: 100%;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0.4;
+}
+.prevShow{
+    left: 2.5%;
+}
+
+.sledShow{
+    transform: rotate(180deg) translate(0,50%);
+    right: 2.5%;
+}
+.deleteBlockMain {
+    background: #F3F3F3;
+    width: 42%;
+    height: 865px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    position: absolute;
+    z-index: 10;
+    top: 45%;
+    left: 45%;
+    transform: scale(0.8) translate(-50%,-50%);
+    animation : deleteBlock  3s;
+}
+@keyframes deleteBlock {
+    0%{
+        transform: scale(0) translate(-50%,-50%);
+    }
+    10%{
+        transform: scale(0.8) translate(-50%,-50%);
+    }
+}
+.backBlack{
+    width: 100%;
+    height: 100%;
+    background : rgba(0,0,0,0.62);
+    position: absolute;
+    z-index: 10;
+    animation: backBlack 0.5s;
+}
+@keyframes backBlack {
+    0%{
+        background: rgba(0,0,0,0);
+    }
+    100%{
+        background : rgba(0,0,0,0.62);
+    }
+}
+.DeleteBlockimageBin {
+    background: #DA8E8E;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 82px;
+}
+
+.DeleteBlockbin:before {
+    font-family: "icomoon" !important;
+    content: "";
+    color: white;
+    font-size: 100px;
+}
+
+.DeleteBlockbin {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.DeleteBlocktitle {
+    color: #5B5B5B;
+    font-size: 60px;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 34px;
+    font-weight: normal;
+}
+
+.DeleteBlockbuttonBlock {
+    width: 100%;
+    height: 84px;
+    margin-top: 158px;
+    display: flex;
+    justify-content: space-around;
+}
+.DeleteBlockbuttonBlock button {
+    width: 35%;
+    height: 100%;
+    color: white;
+    font-size: 45px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.4s;
+}
+.DeleteBlockbuttonBlock .DeleteBlockdeleteShow {
+    background: #2E8EB7;
+}
+.DeleteBlockbuttonBlock .DeleteBlockdeleteShow:hover{
+    background: rgba(14, 99, 136, 1)
+}
+.DeleteBlockbuttonBlock .DeleteBlockcancel:hover{
+    background: rgba(152, 152, 152, 1);
+}
+.DeleteBlockbuttonBlock .DeleteBlockcancel{
+    background : rgba(187, 187, 187, 1)
+}
+.mainChosen{
+    position : absolute;
+    top : 20%;
+    left : 8px;
+}
+.mainChosen:before{
+    font-family: 'icomoon' !important;
+    content: "\e900";
+    color : white;
+    font-size: 35px;
+    font-weight: normal;
+}
+.showImage{
+    /*height: 100%;*/
+    /*width: 88%;*/
+    display: block;
+    z-index: 5;
+}
+.inline,.mainInline{
+    width: 350px;
+    position : relative;
+    margin-left: 5.9%;
+    margin-bottom: 107px;
+}
+.inline{
+    width: 100%;
+    margin-left: 0;
+}
+.showMain{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: black;
+}
+.othermenu{
+    /*height: 261px;*/
+    background: white;
+    position: absolute;
+    width: 201px;
+    border-radius: 10px;
+    animation-duration: 0.35s;
+    font-size: 30px;
+    color : black;
+    right: 10px;
+    top: 80px;
+    z-index: 1;
+    animation : othermenu 0.3s;
+    outline: none;
+}
+@keyframes othermenu {
+    0%{
+        height: 0;
+        font-size: 0;
+    }
+    100%{
+        height: 260px;
+        font-size: 30px;
+    }
+}
+.othermenu ul li{
+    margin-top: 18px;
+    cursor: pointer;
+}
+.othermenu ul li:before{
+    font-family: 'icomoon' !important;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+.othermenu ul{
+    list-style-type: none;
+    padding: 0;
+}
+.otherMenuinfo:before{
+    content: "\ea0c";
+}
+.otherMenudelete:before{
+    content: "\e9ac";
+}
+.otherMenuselect:before{
+    content: "\e902";
+}
+.otherMenuchosen:before{
+    content: "\e900";
+}
+.otherMenuCancel:before{
+    content: "\e903";
+}
+/*// content: "\e903";*/
+.infoBlockImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.infoBlockimageBlock{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 17px;
+    position: relative;
+}
+.infoBlockIsChosen:before{
+    font-family: 'icomoon' !important;
+    content: "\e900";
+    color : white;
+    font-size: 33px;
+
+}
+.infoBlockIsChosen{
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+}
+.infoBlock{
+    width: 345px;
+    height: 707px;
+    border-radius: 15px;
+    background : white;
+    position: absolute;
+    z-index: 5;
+    right: 20px;
+    top: 80px;
+    transform: scale(1);
+    animation: imageInfo 0.3s;
+}
+.infoBlockArrow:before{
+    font-family: 'icomoon' !important;
+    content: "\e903";
+    font-size: 37px;
+    margin-top: 38px;
+    margin-left: 14px;
+    display: block;
+    font-weight: normal;
+    cursor: pointer;
+}
+.infoBlockTitle{
+    font-size: 37px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 12px;
+}
+.infoBlockdateTitle{
+    font-size: 30px;
+    color : #5C5C5C;
+    margin-left: 38px;
+    margin-top: 17px;
+    font-weight: normal;
+}
+.InfoBlockDate{
+    font-size: 37px;
+    font-weight: bold;
+    top: 11px;
+    margin-left: 37px;
+}
+.deletBlockError{
+    color :rgba(169, 21, 21, 1);
+    font-size: 30px;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    margin-top: 13px;
+}
+/*e923f*/
+@keyframes imageInfo {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@media (max-width: 875px) {
+    .s{
+        width: 27%;
+    }
+
+}
+@media (max-width: 1359px) {
+    .DeleteBlocktitle{
+        font-size: 40px;
+    }
+    .deleteBlockMain{
+        transform: scale(0.7) translate(-50%,-50%);
+        animation: none;
+    }
+    .DeleteBlockbuttonBlock button{
+        font-size: 35px;
+    }
+}
+@media (max-width: 1065px) {
+     .deleteBlockMain{
+         width: 62%;
+     }
+}
+@media (max-width: 653px) {
+    .deleteBlockMain{
+        width: 82%;
+    }
+    .s{
+        width: 42%;
+    }
+}
+@media (max-width: 464px) {
+    .deleteBlockMain{
+        width: 90%;
+    }
+    .DeleteBlockbuttonBlock button{
+        font-size: 25px;
+    }
+    .infoBlock{
+        transform: scale(0.8);
+        right: 0;
+        top: 0;
+        animation: none;
+    }
+
+}
+@media (max-width: 381px) {
+    .s{
+        width: 60%;
+    }
+    .deleteBlockMain{
+        width: 100%;
+    }
+}
